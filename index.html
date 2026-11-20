@@ -207,7 +207,7 @@
   </style>
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" class="bg-1">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="154" class="bg-1">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -217,7 +217,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Bad Cover</a>
+      <a class="navbar-brand" href="#myPage" style="height: 154px; padding: 5px 15px;">
+        <img src="assets/img/badcoverlogo.png" alt="Bad Cover" width="144" height="144" style="object-fit: contain;">
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -246,7 +248,7 @@
 <!-- ------   CAROUSEL----------- -->
 <!-- ---------------------------- -->
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style='padding-top:30px'>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style='padding-top:154px'>
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -454,7 +456,7 @@ $(document).ready(function(){
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
+        scrollTop: Math.max(0, $(hash).offset().top - $(".navbar").outerHeight())
       }, 900, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
